@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Array from './Components/Array'
 import Product from './Components/Product'
 
 
@@ -9,7 +8,6 @@ function App() {
   return (
     <>
     
-    <Array/>
     <Product/>
    
     </>

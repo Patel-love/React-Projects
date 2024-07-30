@@ -8,12 +8,12 @@ function Product() {
       <div className="card" style={{ width: "18rem" }}>
         <img
           src={products.image}
-          style={{ height: "200px", objectFit: "contain",width:"200px" }}
+          style={{ height: "230px", objectFit: "contain",width:"230px" }}
           alt={products.title}
         />
         <div className="card-body">
-          <h3 style={{fontFamily:"sans-serif"}}>{products.title.slice(0, 40)}</h3>
-          <p style={{fontStyle:"italic"}}>{products.description.slice(0, 40)}</p>
+          <h3 >{products.title.slice(0, 40)}</h3>
+          <p>{products.description.slice(0, 35)}</p>
           <h3>
           <a href="#" style={{color:"black",textDecoration:"none"}}>₹
             {products.price}
