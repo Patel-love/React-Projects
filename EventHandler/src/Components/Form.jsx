@@ -146,8 +146,7 @@ function Form() {
             </strong>
             <span>
               <b>
-                {" "}
-                {form.fname} {form.lname}{" "}
+                {form.fname} {form.lname}
               </b>
             </span>
           </p>
@@ -187,5 +186,5 @@ function Form() {
       </div>
     );
   }
-
+  
 export default Form;
