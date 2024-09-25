@@ -70,3 +70,4 @@ function Datatable() {
 }
 
 export default Datatable;
+
