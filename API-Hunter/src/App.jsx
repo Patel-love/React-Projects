@@ -28,7 +28,7 @@ function toggleLogin() {
       element: (
         <>
           {" "}
-          <Navbar user={user}  />
+          <Navbar user={user} setUser={setUser} />
         </>
       ),
     },
@@ -37,7 +37,7 @@ function toggleLogin() {
       element: (
         <>
           {" "}
-          <Navbar user={user}  />{" "}
+          <Navbar user={user} />{" "}
           <SignUp toggleLogin={toggleLogin} />{" "}
         </>
       ),
@@ -46,7 +46,7 @@ function toggleLogin() {
       path: "/login",
       element: (
         <>
-          <Navbar user={user}  />
+          <Navbar user={user} setUser={setUser}  />
           <Login setUser={setUser} toggleLogin={toggleLogin} />
         </>
       ),

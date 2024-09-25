@@ -1,7 +1,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function Navbar({ user }) {
+function Navbar({ user,setUser }) {
+const navigate = useNavigate()
+function handleLogout() {
+  setUser(null); 
+  navigate("/signup")
+}
+
 
   return (
     <>
@@ -54,7 +60,7 @@ function Navbar({ user }) {
                   <span className="navbar-text me-3">
                    <b className="fs-5   text-white"> Welcome, <i>{user.name} </i>  </b>
                   </span>
-                  <button className="btn btn-outline-danger   text-white" >
+                  <button onClick={handleLogout} className="btn btn-outline-danger   text-white" >
                     Logout
                   </button>
                 </div>
