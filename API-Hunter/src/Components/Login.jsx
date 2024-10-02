@@ -18,7 +18,6 @@ function Login({ setUser }) {
         
         if (user) {
           setUser(user); 
-          setMessage("Login Successful!");
           navigate('/'); 
         } else {
           alert("Please SignUP First")
@@ -26,7 +25,6 @@ function Login({ setUser }) {
       })
       .catch((error) => {
         console.error('Error fetching users:', error);
-        setMessage("Error fetching user data.");
       });
   }
 
