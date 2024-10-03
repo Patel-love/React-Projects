@@ -1,17 +1,12 @@
 import { initializeApp } from "firebase/app";
 
-
 const firebaseConfig = {
-    apiKey: "AIzaSyAKU_JOeJVaDLZ1KoH313d-wQoEoghcWO0",
-    authDomain: "mybook-app-9cbc7.firebaseapp.com",
-    projectId: "mybook-app-9cbc7",
-    storageBucket: "mybook-app-9cbc7.appspot.com",
-    messagingSenderId: "830337891990",
-    appId: "1:830337891990:web:f53451ad7adeb6d43d4cb7",
-    databaseURL:"https://mybook-app-9cbc7-default-rtdb.firebaseio.com"
-  };
-
+  apiKey: "AIzaSyCwd0Jf9ACunEpnm1tAy8MZ3yKfV-85cfQ",
+  authDomain: "fir-auth-68535.firebaseapp.com",
+  projectId: "fir-auth-68535",
+  storageBucket: "fir-auth-68535.appspot.com",
+  messagingSenderId: "272178908693",
+  appId: "1:272178908693:web:a8d6e2c4d52b52f14e081c",
+};
 
 export const app = initializeApp(firebaseConfig);
-
-export default app

@@ -13,7 +13,6 @@ function App() {
       if (user) {
         setUser(user);
       } else {
-        console.log("User Logout");
         setUser(null);
       }
     });
@@ -21,22 +20,19 @@ function App() {
 
   if (user === null) {
     return (
-      <div className="container signup-container text-center p-5 rounded shadow-lg">
-        <h1 className="display-4 mb-4">Sign Up</h1>
-        <p className="lead mb-5">Create an account to get started</p>
+      <div className="auth-container text-center p-5">
+        <h3 className="mb-5 heading">Create an account to get started</h3>
         <User/>
       </div>
     );
   }
 
   return (
-    <div className="container auth-container text-center p-5 rounded shadow-lg">
-      <h1 className="display-4 mb-4">Welcome!</h1>
-      <h2 className="text-success mb-4">Namaste, {user.email}</h2>
-      <p className="lead">You are now logged in using Google Auth.</p>
-      <button className="btn btn-danger mt-4" onClick={() => signOut(auth)}>
-        Logout
-      </button>
+    <div className="auth-container text-center p-5 shadow rounded-lg">
+      <h1 className="welcome-heading mb-4">Welcome!</h1>
+      <h2 className="user-greeting mb-4"> {user.email}</h2>
+      <p className="info-text mb-4">You are now logged in using Google Auth.</p>
+      <button className="btn btn-logout" onClick={() => signOut(auth)}>Logout</button>
     </div>
   );
 }

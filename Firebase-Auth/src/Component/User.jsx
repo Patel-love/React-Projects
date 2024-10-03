@@ -10,9 +10,9 @@ function User() {
   const [password, setPassword] = useState("");
 
   const signupUser = () => {
-    createUserWithEmailAndPassword(auth, email, password).then(() =>
-      alert("User Signed Up Successfully")
-    ).catch((error) => alert(error.message));
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => alert("User Signed Up Successfully"))
+      .catch((error) => alert(error.message));
   };
 
   const signInWithGoogle = () => {
@@ -20,33 +20,34 @@ function User() {
   };
 
   return (
-    <div className="signup-container p-4 my-4 rounded shadow-lg bg-light">
-      <h1 className="text-center mb-4">Create an Account</h1>
-      <div className="form-group mb-3">
-        <label className="form-label">Email Address</label>
+    <div className="signup-container">
+      <h1 className="form-title">Create an Account</h1>
+
+      <div className="form-group">
+        <label>Email Address</label>
         <input
           type="email"
-          required
           placeholder="Enter your email"
-          className="form-control"
+          className="form-input"
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className="form-group mb-4">
-        <label className="form-label">Password</label>
+
+      <div className="form-group">
+        <label>Password</label>
         <input
           type="password"
-          required
           placeholder="Enter your password"
-          className="form-control"
+          className="form-input"
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
-      <div className="d-grid gap-2">
-        <button className="btn btn-danger mb-2" onClick={signInWithGoogle}>
+
+      <div className="form-actions">
+        <button className="btn btn-outline-primary me-5" onClick={signInWithGoogle}>
           Sign In with Google
         </button>
-        <button className="btn btn-primary" onClick={signupUser}>
+        <button className="btn  btn-outline-success" onClick={signupUser}>
           Sign Up
         </button>
       </div>
